@@ -35,15 +35,22 @@ describe("Pre-entrega", () => {
     loginPage.escribirContraseña(informacion.contraseña);
     loginPage.clickLoginButton();
     homepage.entrarOnlineShopLink();
-    products.agregarProducto1();
+    products.agregarProductos(informacion2.productoUnoNombre);
     products.usarBotonClose();
-    products.agregarProducto2();
+    products.agregarProductos(informacion2.productoDosNombre);
     products.usarBotonClose();
     products.BotonGoToShoppingCart();
     shoppingCart.verificarProducto(informacion2.productoUnoNombre);
-    shoppingCart.verificarPrecio(informacion2.productoUnoPrecio);
+    shoppingCart.verificarPrecio(
+      informacion2.productoUnoNombre,
+      informacion2.productoUnoPrecio
+    );
     shoppingCart.verificarProducto(informacion2.productoDosNombre);
-    shoppingCart.verificarPrecio(informacion2.productoDosPrecio);
-    shoppingCart.verificarPrecio(informacion2.PrecioTotal);
+    shoppingCart.verificarPrecio(
+      informacion2.productoDosNombre,
+      informacion2.productoDosPrecio
+    );
+    shoppingCart.BotonShowTotalPrice();
+    shoppingCart.VerificarElPrecioTotal(informacion2.PrecioTotal);
   });
 });

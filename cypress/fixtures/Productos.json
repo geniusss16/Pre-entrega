@@ -1,9 +1,9 @@
 
     {
         "productoUnoNombre": "Black T-Shirt",
-        "productoUnoPrecio": 15,
+        "productoUnoPrecio": "$15",
         "productoDosNombre": "White Pants",
-        "productoDosPrecio": 20,
-        "PrecioTotal": 30
+        "productoDosPrecio": "$20",
+        "PrecioTotal": "35"
 
       }
