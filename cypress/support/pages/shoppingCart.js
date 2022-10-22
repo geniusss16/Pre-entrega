@@ -20,10 +20,15 @@ export class ShoppingCart {
   }
 
   VerificarElPrecioTotal(precio) {
-    cy.xpath('//p[@id="price"]/descendant::b')
-      .invoke("text")
-      .then((valor) => {
+    cy.xpath('//p[@id="price"]/descendant::b').invoke("text").then((valor) => {
         expect(valor).equal(precio);
       });
   }
+
+  BotonGotoCheckout() {
+    cy.xpath("//button[text()='Go to Checkout']").click();
+  }
+
+
+
 }
