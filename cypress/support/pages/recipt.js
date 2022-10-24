@@ -1,4 +1,11 @@
+import { timeout } from "async";
+
+
 export class Recipt {
+  esperarLaBarraDeProgreso() {
+    cy.get("[role='progressbar']",{timeout:timeout}).should("not.exist");
+  }
+
   verificarNombre(nombre) {
     cy.xpath(`//p[contains(@id,"name")]`)
       .invoke("text")

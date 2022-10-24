@@ -76,7 +76,7 @@ describe("Pre-entrega", () => {
     checkout.lastName(informacion.apellido);
     checkout.cardNumber(informacion.tarjeta);
     checkout.BotonPurchase();
-    cy.wait(10000);
+    recipt.esperarLaBarraDeProgreso();
     recipt.verificarNombre(informacion.nombre);
     recipt.verificarApellido(informacion.apellido);
     recipt.verificarProducto1(informacion2.productoUnoNombre);
